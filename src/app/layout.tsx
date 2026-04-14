@@ -10,9 +10,32 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "Репетитор — №1 в Таджикистане по подготовке к экзаменам",
+  title: {
+    default: "Репетитор — №1 в Таджикистане по подготовке к экзаменам",
+    template: "%s | Репетитор",
+  },
   description:
     "Учебный центр «Репетитор» — 20+ лет опыта подготовки к вступительным экзаменам. Курсы для медвузов, кластеров, зарубежных вузов.",
+  metadataBase: new URL("https://repetitor.tj"),
+  openGraph: {
+    type: "website",
+    locale: "ru_RU",
+    siteName: "Репетитор",
+    images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Репетитор" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  alternates: {
+    languages: {
+      ru: "https://repetitor.tj/ru",
+      tg: "https://repetitor.tj/tj",
+    },
+  },
 };
 
 export default function RootLayout({
