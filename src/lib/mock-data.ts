@@ -11,10 +11,14 @@ export const mockCourses: Course[] = [
     description_tj:
       "Омодагии мукаммал ба имтиҳонҳои дохилшавӣ ба донишгоҳҳои тиббӣ аз фанҳои кластери 5: биология, химия, математика.",
     program_ru: [
-      { title: "Биология", topics: ["Клетка", "Генетика", "Анатомия"] },
+      { title: "Биология", topics: ["Клетка и её строение", "Генетика и наследственность", "Анатомия человека", "Зоология", "Ботаника"] },
+      { title: "Химия", topics: ["Общая химия", "Неорганическая химия", "Органическая химия", "Биохимия"] },
+      { title: "Математика", topics: ["Алгебра", "Геометрия", "Тригонометрия"] },
     ],
     program_tj: [
-      { title: "Биология", topics: ["Ҳуҷайра", "Генетика", "Анатомия"] },
+      { title: "Биология", topics: ["Ҳуҷайра ва сохтори он", "Генетика ва мерос", "Анатомияи инсон", "Зоология", "Ботаника"] },
+      { title: "Химия", topics: ["Химияи умумӣ", "Химияи ғайриорганикӣ", "Химияи органикӣ", "Биохимия"] },
+      { title: "Математика", topics: ["Алгебра", "Геометрия", "Тригонометрия"] },
     ],
     duration: "9 месяцев",
     price_from: 350,
@@ -33,10 +37,14 @@ export const mockCourses: Course[] = [
     description_tj:
       "Омодагӣ аз физика, математика ва забони русӣ барои ихтисосҳои муҳандисӣ.",
     program_ru: [
-      { title: "Физика", topics: ["Механика", "Оптика", "Электричество"] },
+      { title: "Физика", topics: ["Механика", "Молекулярная физика", "Электричество и магнетизм", "Оптика", "Ядерная физика"] },
+      { title: "Математика", topics: ["Алгебра и начала анализа", "Геометрия", "Тригонометрия", "Комбинаторика"] },
+      { title: "Русский язык", topics: ["Орфография", "Пунктуация", "Развитие речи"] },
     ],
     program_tj: [
-      { title: "Физика", topics: ["Механика", "Оптика", "Электричество"] },
+      { title: "Физика", topics: ["Механика", "Физикаи молекулавӣ", "Электричество ва магнетизм", "Оптика", "Физикаи ядроӣ"] },
+      { title: "Математика", topics: ["Алгебра ва ибтидои таҳлил", "Геометрия", "Тригонометрия", "Комбинаторика"] },
+      { title: "Забони русӣ", topics: ["Орфография", "Пунктуатсия", "Инкишофи нутқ"] },
     ],
     duration: "9 месяцев",
     price_from: 300,
@@ -47,6 +55,54 @@ export const mockCourses: Course[] = [
   },
   {
     id: "3",
+    slug: "cluster-3",
+    title_ru: "Кластер 3 (Естественные науки)",
+    title_tj: "Кластери 3 (Илмҳои табиатшиносӣ)",
+    description_ru:
+      "Подготовка по химии, биологии и математике для естественно-научных факультетов.",
+    description_tj:
+      "Омодагӣ аз химия, биология ва математика барои факултетҳои табиатшиносӣ.",
+    program_ru: [
+      { title: "Химия", topics: ["Общая химия", "Органическая химия", "Аналитическая химия"] },
+      { title: "Биология", topics: ["Ботаника", "Зоология", "Экология"] },
+    ],
+    program_tj: [
+      { title: "Химия", topics: ["Химияи умумӣ", "Химияи органикӣ", "Химияи аналитикӣ"] },
+      { title: "Биология", topics: ["Ботаника", "Зоология", "Экология"] },
+    ],
+    duration: "9 месяцев",
+    price_from: 300,
+    category: "cluster_3",
+    image_url: "/images/courses/science.jpg",
+    is_active: true,
+    order_index: 3,
+  },
+  {
+    id: "4",
+    slug: "cluster-1",
+    title_ru: "Кластер 1 (Гуманитарные вузы)",
+    title_tj: "Кластери 1 (Донишгоҳҳои гуманитарӣ)",
+    description_ru:
+      "Подготовка по истории, географии и родному языку для гуманитарных факультетов.",
+    description_tj:
+      "Омодагӣ аз таърих, ҷуғрофия ва забони модарӣ барои факултетҳои гуманитарӣ.",
+    program_ru: [
+      { title: "История", topics: ["История Таджикистана", "Всемирная история", "Обществознание"] },
+      { title: "Родной язык", topics: ["Грамматика", "Литература", "Сочинение"] },
+    ],
+    program_tj: [
+      { title: "Таърих", topics: ["Таърихи Тоҷикистон", "Таърихи ҷаҳон", "Ҷомеашиносӣ"] },
+      { title: "Забони модарӣ", topics: ["Грамматика", "Адабиёт", "Иншо"] },
+    ],
+    duration: "9 месяцев",
+    price_from: 280,
+    category: "cluster_1",
+    image_url: "/images/courses/humanities.jpg",
+    is_active: true,
+    order_index: 4,
+  },
+  {
+    id: "5",
     slug: "english-language",
     title_ru: "Английский язык",
     title_tj: "Забони англисӣ",
@@ -55,17 +111,67 @@ export const mockCourses: Course[] = [
     description_tj:
       "Курсҳои забони англисӣ барои ҳамаи сатҳҳо. Омодагӣ ба IELTS, TOEFL.",
     program_ru: [
-      { title: "General English", topics: ["Grammar", "Speaking", "Writing"] },
+      { title: "General English", topics: ["Grammar", "Speaking", "Writing", "Listening", "Reading"] },
+      { title: "IELTS Preparation", topics: ["Academic Writing", "Speaking Practice", "Listening Strategies", "Reading Techniques"] },
     ],
     program_tj: [
-      { title: "General English", topics: ["Grammar", "Speaking", "Writing"] },
+      { title: "General English", topics: ["Grammar", "Speaking", "Writing", "Listening", "Reading"] },
+      { title: "Омодагӣ ба IELTS", topics: ["Academic Writing", "Speaking Practice", "Listening Strategies", "Reading Techniques"] },
     ],
     duration: "6 месяцев",
     price_from: 250,
     category: "english",
     image_url: "/images/courses/english.jpg",
     is_active: true,
-    order_index: 3,
+    order_index: 5,
+  },
+  {
+    id: "6",
+    slug: "abroad-universities",
+    title_ru: "Подготовка в зарубежные вузы",
+    title_tj: "Омодагӣ ба донишгоҳҳои хориҷӣ",
+    description_ru:
+      "Подготовка к поступлению в вузы России, Турции, Китая и других стран.",
+    description_tj:
+      "Омодагӣ ба дохилшавӣ ба донишгоҳҳои Русия, Туркия, Чин ва дигар кишварҳо.",
+    program_ru: [
+      { title: "Профильные предметы", topics: ["По выбранному направлению"] },
+      { title: "Иностранные языки", topics: ["Русский", "Английский", "Турецкий"] },
+    ],
+    program_tj: [
+      { title: "Фанҳои касбӣ", topics: ["Аз рӯи самти интихобшуда"] },
+      { title: "Забонҳои хориҷӣ", topics: ["Русӣ", "Англисӣ", "Туркӣ"] },
+    ],
+    duration: "9 месяцев",
+    price_from: 400,
+    category: "abroad",
+    image_url: "/images/courses/abroad.jpg",
+    is_active: true,
+    order_index: 6,
+  },
+  {
+    id: "7",
+    slug: "mathematics",
+    title_ru: "Математика (углублённый курс)",
+    title_tj: "Математика (курси амиқ)",
+    description_ru:
+      "Углублённый курс математики для подготовки к олимпиадам и экзаменам.",
+    description_tj:
+      "Курси амиқи математика барои омодагӣ ба олимпиадаҳо ва имтиҳонҳо.",
+    program_ru: [
+      { title: "Алгебра", topics: ["Уравнения", "Неравенства", "Функции", "Логарифмы"] },
+      { title: "Геометрия", topics: ["Планиметрия", "Стереометрия", "Координатная геометрия"] },
+    ],
+    program_tj: [
+      { title: "Алгебра", topics: ["Муодилаҳо", "Нобаробариҳо", "Функсияҳо", "Логарифмҳо"] },
+      { title: "Геометрия", topics: ["Планиметрия", "Стереометрия", "Геометрияи координатӣ"] },
+    ],
+    duration: "6 месяцев",
+    price_from: 200,
+    category: "math",
+    image_url: "/images/courses/math.jpg",
+    is_active: true,
+    order_index: 7,
   },
 ];
 
