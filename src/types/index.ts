@@ -92,10 +92,7 @@ export interface Lead {
 }
 
 /** Helper to pick localized field */
-export function localized<T extends Record<string, unknown>>(
-  item: T,
-  field: string,
-  locale: string
-): string {
-  return (item[`${field}_${locale}`] as string) || (item[`${field}_ru`] as string) || "";
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export function localized(item: any, field: string, locale: string): string {
+  return item[`${field}_${locale}`] || item[`${field}_ru`] || "";
 }
