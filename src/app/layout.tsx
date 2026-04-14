@@ -1,14 +1,11 @@
 import type { Metadata } from "next";
-import { Montserrat, Geist } from "next/font/google";
+import { Montserrat } from "next/font/google";
 import "./globals.css";
-import { cn } from "@/lib/utils";
-
-const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
 const montserrat = Montserrat({
   subsets: ["latin", "cyrillic"],
   weight: ["400", "500", "600", "700"],
-  variable: "--font-montserrat",
+  variable: "--font-sans",
   display: "swap",
 });
 
@@ -24,8 +21,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html suppressHydrationWarning className={cn("font-sans", geist.variable)}>
-      <body className={`${montserrat.variable} font-body antialiased`}>
+    <html suppressHydrationWarning className={montserrat.variable}>
+      <body className="font-body antialiased">
         {children}
       </body>
     </html>
