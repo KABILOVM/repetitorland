@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import type { ReactNode } from "react";
 
 interface AnimateOnScrollProps {
@@ -14,6 +14,13 @@ export function AnimateOnScroll({
   className,
   delay = 0,
 }: AnimateOnScrollProps) {
+  const prefersReduced = useReducedMotion();
+
+  // Skip animation if user prefers reduced motion
+  if (prefersReduced) {
+    return <div className={className}>{children}</div>;
+  }
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}
