@@ -1,26 +1,51 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* ── Custom Fonts ── */
+@font-face {
+  font-family: "Elektra";
+  src: url("/fonts/ElektraMediumPro.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* ── Brand Theme ── */
+@theme {
+  /* Brand colors */
+  --color-brand-50: #EAF6FD;
+  --color-brand-100: #CDEAFA;
+  --color-brand-200: #9BD5F5;
+  --color-brand-300: #69C0F0;
+  --color-brand-400: #49B5EB;
+  --color-brand-500: #28A9E7;
+  --color-brand-600: #1E8BC3;
+  --color-brand-700: #156A97;
+  --color-brand-800: #0F4F71;
+  --color-brand-900: #0B3A54;
+
+  /* Neutral colors */
+  --color-text-primary: #0F172A;
+  --color-text-secondary: #64748B;
+  --color-bg-section: #F8FAFC;
+  --color-bg-white: #FFFFFF;
+
+  /* Fonts */
+  --font-heading: "Elektra", "Montserrat", sans-serif;
+  --font-body: "Montserrat", sans-serif;
+
+  /* Shadows */
+  --shadow-card: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-card-hover: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* ── Base styles ── */
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body);
+  color: var(--color-text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
 }
